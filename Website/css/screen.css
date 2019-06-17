@@ -1,0 +1,1524 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 600;
+    src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype")
+}
+
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+
+html {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Segoe UI, Helvetica, arial, sans-serif;
+    color: #20223A;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: black;
+    color: white;
+    text-shadow: none;
+}
+
+::selection {
+    background: black;
+    color: white;
+    text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 48px;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 24px;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+    margin: 0 0 24px;
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+li ul,
+li ol {
+    margin-bottom: 0;
+}
+
+blockquote {
+    font-style: normal;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 0 0 24px;
+}
+
+blockquote * {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+figcaption {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: LightGrey;
+    margin: 0 0 24px;
+}
+
+a {
+    color: #00BCD4;
+    transition: all .1s ease-in-out;
+}
+
+a:visited,
+a:active {
+    color: #00BCD4;
+}
+
+a:hover,
+a:focus {
+    color: black;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    z-index: 1;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+.o-main {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+}
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+    position: relative;
+    padding: 24px 24px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.o-column {
+    flex-direction: column;
+    margin: auto;
+    align-content: center;
+    padding-top: 0
+}
+
+.o-row--padding {
+    padding: 0 !important;
+}
+
+.o-top-row--margin {
+    margin-top: 8px;
+}
+
+@media (min-width: 425px) {
+    .o-column{
+        flex-direction: row;
+    }
+}
+
+/* color modifiers */
+
+.o-row--primary-x-light {
+    background-color: #F2FAFF;
+}
+
+.o-row--neutral-xx-dark {
+    color: #fff;
+    background: #20223A;
+}
+
+.o-row--header {
+    background-color: #00BCD4;
+}
+
+.o-row--content {
+    text-align: center;
+}
+
+.o-row__stick {
+    padding: 0;
+    margin-bottom: 160px;
+}
+
+/* intro needs a larger z-index to pull the image over the next row */
+
+.o-row--intro {
+    z-index: 10;
+}
+
+/* size modifiers */
+
+.o-row--lg {
+    padding-top: 48px;
+    padding-bottom: 24px;
+}
+
+.o-row--intro {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.o-row--xl {
+    padding-top: 72px;
+    padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+    .o-row {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+
+    .o-row--lg {
+        padding-top: 72px;
+        padding-bottom: 48px;
+    }
+}
+
+@media (min-width: 992px) {
+    .o-row--intro {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .o-row--xl {
+        padding-top: 96px;
+        padding-bottom: 72px;
+    }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 50em; /* 90 * 16px = 1440px */
+}
+
+.o-container__stats {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.o-container--color{
+    background-color: #00BCD4
+}
+
+.o-container--flow {
+    justify-content: space-between;
+}
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .o-layout__item {
+        width: 100%;
+    }
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+    margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+    padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+    margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+    padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+    margin: 0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+    padding: 0 24px;
+}
+
+.o-layout--gutter-xl {
+    margin: 0 -48px;
+}
+
+.o-layout--gutter-xl > .o-layout__item {
+    padding: 0 48px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+    justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+    justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+    justify-content: center;
+}
+
+.o-layout--justify-space-around {
+    justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+    justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+    justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+    align-items: flex-start;
+}
+
+.o-layout--align-end {
+    align-items: flex-end;
+}
+
+.o-layout--align-center {
+    align-items: center;
+}
+
+.o-layout--align-baseline {
+    align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is one than one flex item */
+
+.o-layout--align-content-start {
+    align-content: start;
+}
+
+.o-layout--align-content-end {
+    align-content: end;
+}
+
+.o-layout--align-content-center {
+    align-content: center;
+}
+
+.o-layout--align-content-space-around {
+    align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+    align-content: space-between;
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+    list-style: none;
+    padding: 0;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+.o-joystick {
+  margin: 40px;
+}
+
+.o-joystick {
+  width: 220px;
+  height: 220px;
+  position: relative;
+  display: block;
+  margin: 48px auto;
+  margin-bottom: 0;
+}
+
+.o-joystick__up {
+    margin: auto;
+    width: 100%;
+    padding-left: 24px;
+    fill: #008899;
+}
+
+.o-joystick__down {
+    margin: auto;
+    width: 100%;
+    padding-left: 24px;
+    fill: #008899;
+}
+
+.o-button {
+    margin: auto;
+    width: 100%;
+    color: inherit;
+    border: none;
+    padding: none;
+    font: inherit;
+    background: none;
+    outline: none;
+}
+
+/*
+.o-joystick .o-joystick__outer {
+  border-radius: 45%;
+  height: 100%;
+  width: 100%;
+  background-color: #70C1CB;
+}
+
+.o-joystick .o-joystick__inner {
+  transform-origin: left center;
+  position: absolute;
+  top: calc(50% - 137.5px/2);
+  left: calc(50% - 137.5px/2);
+}
+.o-joystick .o-joystick__thumb {
+  height: 137.5px;
+  width: 137.5px;
+  border-radius: 50%;
+  background-color: #008899;
+}
+
+.o-joystick .o-joystick__inner {
+  transform-origin: center;
+}
+*/
+
+.u-center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.o-content{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.o-content--center {
+    position: relative;
+    align-content: center;
+}
+
+.o-center {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.o-center--color{
+    background-color: #00BCD4;
+}
+
+.o-center--stats {
+    padding-top: 16px;
+}
+
+.o-nav {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: #00BCD4;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.o-svg {
+    border-radius: 25px;
+    background-color: rgba(0,90,102,0.3);
+    width: 32px;
+    height: 32px;
+}
+
+.o-svg__content {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.o-item {
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+    width: 160px;
+    height: 160px;
+    margin: auto;
+}
+
+.o-item__content {
+    padding: 16px;
+    fill: #005A66;
+    height: 100%;
+}
+
+.o-button {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.o-button__click {
+    width: 75%;
+    height: 36px;
+    border-radius: 24px;
+    color: inherit;
+    font: inherit;
+    background: white;
+    outline: none;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+}
+
+.o-speed {
+    font: "Segoe UI" 24px Bold;
+    padding: 0;
+    margin: 0 !important;
+    color: #005A66
+}
+
+.o-speed__tag {
+    margin: 0;
+    margin-top: 20px;
+    margin-left: -16px;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.o-speed__title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #005A66;
+}
+
+.o-stat {
+    flex-flow: row;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+/*
+    Component: Logo
+    ---
+    Website main logo
+*/
+
+.c-logo {
+    height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.c-logo__symbol {
+    height: 100%;
+    color: white;
+    text-align: center;
+    margin-top: -8px;
+}
+
+.c-logo__title {
+    margin: -8px;
+    font-size: 24px;
+    font-family: "Roboto";
+}
+
+.c-logo__tabs {
+    flex-flow: row;
+    text-align: center;
+    padding: 0;
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+}
+
+.c-logo__item {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 24px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.c_logo__tabs,  a:visited {
+    color: white;
+}
+
+.c-logo__active {
+    border-bottom: 2px solid #005A66;
+}
+
+/*
+    Component: header
+    ---
+    Main header of the website
+*/
+
+.c-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.c-header__nav {
+    display: none;
+}
+
+.c-header__logo {
+    margin-left: 24px;
+}
+
+@media (min-width: 992px) {
+    .c-header__nav {
+        display: block;
+    }
+
+    /* .c-header__mobile-nav-trigger{
+        display: none;
+    } */
+}
+
+/*
+    Component: Nav
+    ---
+    Main navigation of the site
+*/
+
+.c-nav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.c-nav-trigger__svg {
+    fill: white;
+    height: 100%;
+}
+
+.c-nav {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.c-nav__link {
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    padding: 8px 0;
+}
+
+.c-nav__link,
+.c-nav__link:visited,
+.c-nav__link:active {
+    color: white;
+}
+
+.c-nav__link:hover,
+.c-nav__link:focus {
+    color: black;
+}
+
+@media (min-width: 992px) {
+    .c-nav__list {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .c-nav__item--cta {
+        margin-left: 20px;
+    }
+
+    .c-nav__link {
+        padding: 8px 20px;
+    }
+}
+
+/*
+    Component: Lead
+    ---
+    Lead type treatments to style everything that differs from standard typography elements
+*/
+
+.c-lead {
+    position: relative;
+}
+
+.c-lead--md {
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.c-lead--lg {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.c-lead--xl {
+    font-size: 32px;
+    line-height: 40px;
+}
+
+@media (min-width: 768px) {
+    .c-lead--xl {
+        font-size: 41px;
+        line-height: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-lead--xl {
+        font-size: 52px;
+        line-height: 64px;
+    }
+}
+
+/*
+    Component: Intro
+    ---
+    Intro part on the homepage
+*/
+
+.c-intro {
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .c-intro__figure {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .c-intro {
+        margin-bottom: -96px;
+    }
+
+    .c-intro__body {
+        position: relative;
+        top: -48px;
+    }
+}
+
+/*
+    Component: CTA link
+    ---
+    Small cta link with custom animation
+*/
+
+.c-link-cta {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px #2E77E6;
+    background: white;
+}
+
+.c-link-cta,
+.c-link-cta:visited,
+.c-link-cta:active {
+    color: #fff;
+}
+
+.c-link-cta:hover,
+.c-link-cta:focus {
+    color: #fff;
+    background: #00BCD4;
+}
+
+.c-link-cta:active {
+    background-color: #00BCD4;
+}
+
+.c-link-cta--lg {
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+/*
+    Component: Stat
+    ---
+    Component to visualise statistics
+*/
+
+.c-stats {
+    margin-bottom: -24px;
+}
+
+.c-stat {
+    color: #00BCD4;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.c-stat__title {
+    margin-bottom: 4px;
+    font-size: 41px;
+    line-height: 48px;
+}
+
+.c-stat__what {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/*
+    Component: title
+    ---
+    Component to show title in center
+*/
+
+.c-title {
+    text-align: center;
+}
+
+.c-title__number {
+    font-size: 32px;
+}
+
+.c-title__value {
+    font-size: 20px;
+    color: rgba(0,0,0,0.5)
+}
+
+/*
+    Component: status
+    ---
+    Component to show status in center
+*/
+
+.c-status {
+    text-align: center;
+    margin: auto;
+    margin-top: 24px;
+    width: 50%;
+    font-size: 20px;
+}
+
+/*
+    Component: mobile nav
+    ---
+    Dedicated mobile nav component
+*/
+
+.c-mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s;
+    background-color: #00BCD4;
+}
+
+.has-mobile-nav .c-mobile-nav {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.c-mobile-nav__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.c-mobile-nav__bg {
+}
+
+.has-mobile-nav .c-mobile-nav__bg {
+
+}
+
+.c-mobile-nav__body {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00BCD4;
+}
+
+.has-mobile-nav .c-mobile-nav__body {
+}
+
+@media (min-width: 320px) {
+    .c-mobile-nav__body {
+        padding: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .c-mobile-nav__body {
+        padding-top: 24px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Hide the mobile nav on larger viewports even whent it's open on smaller screens */
+    .c-mobile-nav__body {
+        /* display: none !important; */
+        padding: 0;
+        padding-top: 24px;
+    }
+}
+
+.c-mobile-nav, a {
+    color: black;
+}
+
+.c-battery {
+    margin: auto;
+}
+
+.c-battery--percentage {
+    margin: 0;
+}
+
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+
+/*
+    Utilities: color
+    ---
+    Utility classes to put specific colors onto elements
+*/
+
+.u-color-neutral-base {
+    color: #9C9EB8;
+}
+
+.u-color-neutral-dark {
+    color: #83859E;
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+    padding-top: 0 !important;
+}
+
+.u-mb-clear {
+    margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+    margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+    margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+    margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+    margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+    margin-bottom: 48px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+    max-width: 18em !important;
+}
+
+.u-max-width-sm {
+    max-width: 39em !important;
+}
+
+.u-max-width-md {
+    max-width: 50em !important;
+}
+
+.u-max-width-lg {
+    max-width: 63.5em !important;
+}
+
+.u-max-width-none {
+    max-width: none !important;
+}
+
+/*
+    Utility: Widths
+    ---
+    Utility classes to put specific widths onto elements
+    Will be mostly used on o-layout__item
+*/
+
+.u-width-auto {
+    width: auto !important;
+}
+
+.u-1-of-2 {
+    width: 50% !important;
+}
+
+.u-1-of-3 {
+    width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+    width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+    width: 25% !important;
+}
+
+.u-3-of-4 {
+    width: 75% !important;
+}
+
+.u-1-of-5 {
+    width: 20% !important;
+}
+
+.u-2-of-5 {
+    width: 40% !important;
+}
+
+.u-3-of-5 {
+    width: 60% !important;
+}
+
+.u-4-of-5 {
+    width: 80% !important;
+}
+
+.u-1-of-6 {
+    width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+    width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+    .u-1-of-2-bp1 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp1 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp1 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp1 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp1 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp1 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp1 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp1 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp1 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp1 {
+        width: 16.6666666667% !important;
+    }
+    .u-5-of-6-bp1 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .u-1-of-2-bp2 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp2 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp2 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp2 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp2 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp2 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp2 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp2 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp2 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp2 {
+        width: 16.6666666667% !important;
+    }
+    .u-5-of-6-bp2 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .u-1-of-2-bp3 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp3 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp3 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp3 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp3 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp3 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp3 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp3 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp3 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp3 {
+        width: 16.6666666667% !important;
+    }
+    .u-5-of-6-bp3 {
+        width: 83.3333333333% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .u-1-of-2-bp4 {
+        width: 50% !important;
+    }
+    .u-1-of-3-bp4 {
+        width: 33.3333333333% !important;
+    }
+    .u-2-of-3-bp4 {
+        width: 66.6666666667% !important;
+    }
+    .u-1-of-4-bp4 {
+        width: 25% !important;
+    }
+    .u-3-of-4-bp4 {
+        width: 75% !important;
+    }
+    .u-1-of-5-bp4 {
+        width: 20% !important;
+    }
+    .u-2-of-5-bp4 {
+        width: 40% !important;
+    }
+    .u-3-of-5-bp4 {
+        width: 60% !important;
+    }
+    .u-4-of-5-bp4 {
+        width: 80% !important;
+    }
+    .u-1-of-6-bp4 {
+        width: 16.6666666667% !important;
+    }
+    .u-5-of-6-bp4 {
+        width: 83.3333333333% !important;
+    }
+}
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

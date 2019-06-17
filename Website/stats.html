@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Speedboard</title>
+    <meta name="description" content="Speedboard Home Control Screen.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#00BCD4">
+    <meta name="theme-color" content="#00BCD4">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#00BCD4">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/screen.css">
+
+    <script src="script/script.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            toggleNav();
+        })
+
+        function toggleNav() {
+            let toggleTrigger = document.querySelectorAll(".js-toggle-nav");
+            for (let i = 0; i < toggleTrigger.length; i++) {
+                toggleTrigger[i].addEventListener("click", function() {
+                    console.log("ei");
+                    document.querySelector("body").classList.toggle("has-mobile-nav");
+                })
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="o-row o-row--header">
+            <div class="o-container">
+                <div class="c-header">
+                    <div class="c-header__mobile-nav-trigger">
+                        <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                            <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="c-header__logo">
+                        <h1 class="c-logo">
+                            <div class="c-logo__symbol">
+                                <p class="c-logo__title">Speedboard</p>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="o-row o-row--header c-logo__tabs o-layout">
+            <div class="o-container o-container--color">
+                <div class="o-layout">
+                    <a class="c-logo__item u-1-of-2" href="index.html">Control</a>
+                    <a class="c-logo__item u-1-of-2 c-logo__active" href="#">Stats</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="o-center o-center--color o-center--stats">
+        <div class="o-container o-container__stats">
+            <div class="o-row o-column">
+                <div class="u-1-of-2 u-center">
+                    <div class="o-item">
+                        <div class="o-item__content">
+                            <div class="o-svg">
+                                <svg class="o-svg__content" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 2v11h3v9l7-12h-4l4-8z" /></svg>
+                            </div>
+                            <div class="o-stat">
+                                <div class="o-row o-row--padding o-top-row--margin">
+                                    <h1 class="o-speed u-1-of-2">
+                                        35
+                                    </h1>
+                                    <p class="o-speed__tag u-1-of-2">
+                                        km/u
+                                    </p>
+                                </div>
+                                <div class="o-row o-row--padding">
+                                    <h2 class="o-speed__title">
+                                        Max speed
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-1-of-2 u-center">
+                    <div class="o-item">
+                        <div class="o-item__content">
+                            <div class="o-svg">
+                                <svg class="o-svg__content" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 2v11h3v9l7-12h-4l4-8z" /></svg>
+                            </div>
+                            <div class="o-stat">
+                                <div class="o-row o-row--padding o-top-row--margin">
+                                    <h1 class="o-speed u-1-of-2">
+                                        25
+                                    </h1>
+                                    <p class="o-speed__tag u-1-of-2">
+                                        km/u
+                                    </p>
+                                </div>
+                                <div class="o-row o-row--padding">
+                                    <h2 class="o-speed__title">
+                                        Average Speed
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="o-row o-column">
+                <div class="u-1-of-2 u-center">
+                    <div class="o-item">
+                        <div class="o-item__content">
+                            <div class="o-svg">
+                                <svg class="o-svg__content" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 2v11h3v9l7-12h-4l4-8z" /></svg>
+                            </div>
+                            <div class="o-stat">
+                                <div class="o-row o-row--padding o-top-row--margin">
+                                    <h1 class="o-speed u-1-of-2">
+                                        40
+                                    </h1>
+                                    <p class="o-speed__tag u-1-of-2">
+                                        km
+                                    </p>
+                                </div>
+                                <div class="o-row o-row--padding">
+                                    <h2 class="o-speed__title">
+                                        Max range
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-1-of-2 u-center">
+                    <div class="o-item">
+                        <div class="o-item__content">
+                            <div class="o-svg">
+                                <svg class="o-svg__content" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 2v11h3v9l7-12h-4l4-8z" /></svg>
+                            </div>
+                            <div class="o-stat">
+                                <div class="o-row o-row--padding o-top-row--margin">
+                                    <h1 class="o-speed u-1-of-2">
+                                        30
+                                    </h1>
+                                    <p class="o-speed__tag u-1-of-2">
+                                        km
+                                    </p>
+                                </div>
+                                <div class="o-row o-row--padding">
+                                    <h2 class="o-speed__title">
+                                        Average range
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="c-mobile-nav">
+        <div class="o-container">
+            <div class="c-mobile-nav__bg"></div>
+            <div class="c-mobile-nav__body">
+                <div class="c-mobile-nav__header">
+                    <div class="c-header__mobile-nav-trigger">
+                        <button class="o-button-reset c-nav-trigger js-toggle-nav">
+                            <svg class="c-nav-trigger__svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="c-header__logo">
+                        <h1 class="c-logo">
+                            <div class="c-logo__symbol">
+                                <p class="c-logo__title">Speedboard</p>
+                            </div>
+                        </h1>
+                    </div>
+                </div>
+                <div class="c-mobile-nav__nav c-mobile-nav__nav--main">
+                    <nav class="c-nav">
+                        <ul class="o-list c-nav__list">
+                            <li class="c-nav__item"><a href="index.html" class="c-nav__link">Home</a></li>
+                            <li class="c-nav__item"><a href="#" class="c-nav__link">Add user</a></li>
+                            <li class="c-nav__item"><a href="#" class="c-nav__link">Settings</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </aside>
+</body>
+
+</html>
